@@ -3,6 +3,7 @@ package com.example.booking_service.Service;
 import com.example.booking_service.Repository.*;
 import com.example.booking_service.model.*;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Component;
@@ -24,13 +25,16 @@ public class DataSeeder {
     private final TrainRepository trainRepository;
     private final StationRepository stationRepository;
     private final TrainScheduleRepository trainScheduleRepository;
+    private final boolean sampleTrainSeedingEnabled;
 
-    public DataSeeder(TrainRepository trainRepository, 
+    public DataSeeder(TrainRepository trainRepository,
                       StationRepository stationRepository,
-                      TrainScheduleRepository trainScheduleRepository) {
+                      TrainScheduleRepository trainScheduleRepository,
+                      @Value("${app.data.seed.sample-trains:false}") boolean sampleTrainSeedingEnabled) {
         this.trainRepository = trainRepository;
         this.stationRepository = stationRepository;
         this.trainScheduleRepository = trainScheduleRepository;
+        this.sampleTrainSeedingEnabled = sampleTrainSeedingEnabled;
     }
 
     @EventListener(ApplicationReadyEvent.class)
@@ -39,7 +43,11 @@ public class DataSeeder {
         try {
             log.info("Starting data seeding...");
             seedStations();
-            seedTrainsAndSchedules();
+            if (sampleTrainSeedingEnabled) {
+                seedTrainsAndSchedules();
+            } else {
+                log.info("Sample train seeding is disabled via app.data.seed.sample-trains=false. Existing PostgreSQL train data remains untouched.");
+            }
             log.info("Data seeding completed successfully");
         } catch (Exception e) {
             log.error("Error during data seeding: ", e);

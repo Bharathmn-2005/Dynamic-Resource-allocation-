@@ -1,17 +1,19 @@
 import { bookingApi } from './client';
-import type { TrainResponse, SeatAvailabilityResponse } from '../types/train';
+import type { TrainResponse, TrainSearchResult, SeatAvailabilityResponse } from '../types/train';
 import type { BookingDetails, BookingResponse, MyBooking } from '../types/booking';
 
 export interface TrainSearchParams {
-  source: string;
-  destination: string;
+  source?: string;
+  destination?: string;
+  journeyDate?: string;
+  trainNumber?: number;
 }
 
 export const TrainApi = {
-  async search(params: TrainSearchParams): Promise<TrainResponse[]> {
-    const { source, destination } = params;
+  async search(params: TrainSearchParams): Promise<TrainSearchResult[]> {
+    const { source, destination, journeyDate, trainNumber } = params;
     return bookingApi
-      .get('/api/trains/search', { params: { source, destination } })
+      .get('/api/trains/search', { params: { source, destination, journeyDate, trainNumber } })
       .then((res) => res.data);
   },
 

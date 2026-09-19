@@ -7,17 +7,18 @@ import {
   type ReactNode,
 } from 'react';
 import { TrainApi } from '../../api/booking.api';
-import type { TrainResponse } from '../../types/train';
+import type { TrainSearchResult } from '../../types/train';
 
 export interface SearchQuery {
   source: string;
   destination: string;
-  journeyDate: string; // yyyy-MM-dd
+  journeyDate: string;
+  trainNumber?: number;
 }
 
 export interface SearchContextValue {
   query: SearchQuery | null;
-  results: TrainResponse[];
+  results: TrainSearchResult[];
   loading: boolean;
   error: string | null;
   search: (q: SearchQuery) => Promise<void>;
@@ -34,7 +35,7 @@ export function useSearch(): SearchContextValue {
 
 export function SearchProvider({ children }: { children: ReactNode }) {
   const [query, setQuery] = useState<SearchQuery | null>(null);
-  const [results, setResults] = useState<TrainResponse[]>([]);
+  const [results, setResults] = useState<TrainSearchResult[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -43,9 +44,12 @@ export function SearchProvider({ children }: { children: ReactNode }) {
     setError(null);
     setQuery(q);
     try {
-      const trains = await TrainApi.search({ source: q.source, destination: q.destination });
-      // The search endpoint returns trains across dates; preserve the user's
-      // selected journey date for downstream booking.
+      const trains = await TrainApi.search({
+        source: q.source,
+        destination: q.destination,
+        journeyDate: q.journeyDate,
+        trainNumber: q.trainNumber,
+      });
       setResults(trains);
     } catch (e) {
       setResults([]);

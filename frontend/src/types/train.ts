@@ -7,8 +7,8 @@ export interface TrainResponse {
   trainName: string;
   source: string;
   destination: string;
-  departureTime: string; // ISO datetime
-  arrivalTime: string; // ISO datetime
+  departureTime: string;
+  arrivalTime: string;
   durationInMinutes: number;
   distanceKm: number;
   availableSeats: number;
@@ -17,6 +17,32 @@ export interface TrainResponse {
   fare: number;
   trainType: TrainType;
   trainStatus: TrainStatus;
+}
+
+export interface TrainSearchResult {
+  recordId: string;
+  trainNumber: number;
+  source: string;
+  destination: string;
+  journeyDate: string;
+  classOfTravel?: string;
+  quota?: string;
+  bookingDate?: string;
+  currentStatus?: string;
+  numberOfPassengers?: number;
+  ageOfPassengers?: string;
+  bookingChannel?: string;
+  travelDistance?: number;
+  numberOfStations?: number;
+  travelTime?: number;
+  trainType?: string;
+  seatAvailability?: number;
+  specialConsiderations?: string;
+  holidayOrPeakSeason?: string;
+  waitlistPosition?: string;
+  confirmationStatus?: string;
+  bookableTrainId: number | null;
+  bookable: boolean;
 }
 
 export interface SeatAvailabilityResponse {
@@ -34,7 +60,7 @@ export interface Station {
 export interface SearchCriteria {
   source: string;
   destination: string;
-  journeyDate: string; // ISO date (yyyy-MM-dd)
+  journeyDate: string;
   passengers: number;
 }
 

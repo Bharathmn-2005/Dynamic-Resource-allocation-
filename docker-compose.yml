@@ -43,6 +43,31 @@ services:
       retries: 5
 
   # ============================================================================
+  # Elasticsearch
+  # ============================================================================
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.17.0
+    container_name: train-ticket-elasticsearch
+    environment:
+      discovery.type: single-node
+      xpack.security.enabled: "false"
+      ES_JAVA_OPTS: "-Xms512m -Xmx512m"
+      cluster.name: train-ticket-cluster
+    ports:
+      - "9200:9200"
+    volumes:
+      - elasticsearch_data:/usr/share/elasticsearch/data
+    networks:
+      - train-ticket-network
+    healthcheck:
+      test: ["CMD-SHELL", "curl -fsS http://localhost:9200/_cluster/health >/dev/null || exit 1"]
+      interval: 15s
+      timeout: 10s
+      retries: 10
+      start_period: 30s
+    restart: unless-stopped
+
+  # ============================================================================
   # Authentication Service (Port 8080)
   # ============================================================================
   auth-service:
@@ -107,6 +132,10 @@ services:
 
       # Dataset
       APP_DATASET_PATH: ${APP_DATASET_PATH}
+      ELASTICSEARCH_URL: http://elasticsearch:9200
+      APP_ELASTICSEARCH_IMPORT_ENABLED: "true"
+      APP_ELASTICSEARCH_IMPORT_ON_STARTUP: "true"
+      APP_ELASTICSEARCH_IMPORT_FORCE: "false"
 
       # Scheduling and timezone
       TICKET_REMINDER_ENABLED: ${TICKET_REMINDER_ENABLED}
@@ -119,6 +148,8 @@ services:
       postgres:
         condition: service_healthy
       redis:
+        condition: service_healthy
+      elasticsearch:
         condition: service_healthy
     networks:
       - train-ticket-network
@@ -253,4 +284,6 @@ volumes:
   postgres_data:
     driver: local
   redis_data:
+    driver: local
+  elasticsearch_data:
     driver: local

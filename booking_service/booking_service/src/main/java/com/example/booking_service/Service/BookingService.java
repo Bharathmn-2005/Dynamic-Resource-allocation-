@@ -3,7 +3,6 @@ package com.example.booking_service.Service;
 import com.example.booking_service.DTO.BookingRequestDTO;
 import com.example.booking_service.DTO.BookingResponseDTO;
 import com.example.booking_service.DTO.MyBookingDTO;
-import com.example.booking_service.DTO.TrainResponseDTO;
 import com.example.booking_service.DTO.PassengerDTO;
 import com.example.booking_service.client.NotificationClient;
 import com.example.booking_service.client.dto.BookingFailureNotificationRequest;
@@ -26,7 +25,6 @@ import com.example.booking_service.model.TrainClass;
 import com.example.booking_service.model.TrainDetails;
 import com.example.booking_service.model.TrainStatus;
 import jakarta.transaction.Transactional;
-import com.example.booking_service.Service.RailwayDatasetCatalog;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Service;
 
@@ -45,7 +43,6 @@ import java.util.stream.Collectors;
 public class BookingService {
     private final BookingRepository bookingRepo;
     private final TrainRepository trainRepo;
-    private final RailwayDatasetCatalog catalog;
     private final PassengerRepository passengerRepo;
     private final NotificationClient notificationClient;
     private final PnrGeneratorService pnrGeneratorService;
@@ -53,13 +50,11 @@ public class BookingService {
 
     public BookingService(BookingRepository bookingRepo,
                           TrainRepository trainRepo,
-                          RailwayDatasetCatalog catalog,
                           PassengerRepository passengerRepo,
                           NotificationClient notificationClient,
                           PnrGeneratorService pnrGeneratorService) {
         this.bookingRepo = bookingRepo;
         this.trainRepo = trainRepo;
-        this.catalog = catalog;
         this.passengerRepo = passengerRepo;
         this.notificationClient = notificationClient;
         this.pnrGeneratorService = pnrGeneratorService;
@@ -75,15 +70,10 @@ public class BookingService {
         lock.lock();
 
         try {
-            TrainResponseDTO requested = catalog.findById(request.getTrainId())
+            train = trainRepo.findById(request.getTrainId())
                     .orElseThrow(() ->
                             new com.example.booking_service.exception.TrainNotFoundException(
                                     "Train not found with id: " + request.getTrainId()));
-
-            train = trainRepo.findByTrainNumber(requested.getTrainNumber())
-                    .orElseThrow(() ->
-                            new com.example.booking_service.exception.TrainNotFoundException(
-                                    "Train " + requested.getTrainNumber() + " is not available for booking"));
 
             if (train.getStatus() != TrainStatus.ACTIVE) {
                 throw new RuntimeException("Train is not available for booking");

@@ -86,7 +86,7 @@ export function SearchResultsPage() {
         ) : (
           <div className="flex flex-col gap-4">
             {results.map((train) => (
-              <TrainCard key={train.id} train={train} />
+              <TrainCard key={train.recordId} train={train} />
             ))}
           </div>
         )}
