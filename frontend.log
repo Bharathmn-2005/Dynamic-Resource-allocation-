@@ -1,0 +1,164 @@
+
+> railvoyage@1.0.0 dev
+> vite --no-open
+
+
+  [32m[1mVITE[22m v7.3.6[39m  [2mready in [0m[1m763[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+[2m10:08:49 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles/globals.css[22m
+[2m10:09:46 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles/globals.css[22m
+[2m10:10:12 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles/globals.css, /src/features/trains/search.context.tsx, /src/pages/ConfirmationPage.tsx, /src/pages/PaymentPage.tsx, /src/pages/TrainDetailPage.tsx, /src/pages/BookingDetailPage.tsx, /src/pages/MyBookingsPage.tsx, /src/pages/BookingPage.tsx[22m
+[2m10:10:12 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles/globals.css, /src/features/trains/search.context.tsx, /src/pages/ConfirmationPage.tsx, /src/pages/PaymentPage.tsx, /src/pages/TrainDetailPage.tsx, /src/pages/BookingDetailPage.tsx, /src/pages/MyBookingsPage.tsx, /src/pages/BookingPage.tsx[22m
+[2m10:10:27 pm[22m [36m[1m[vite][22m[39m [32mvite.config.ts changed, restarting server...[39m
+[2m10:10:28 pm[22m [36m[1m[vite][22m[39m server restarted.
+[2m10:10:42 pm[22m [36m[1m[vite][22m[39m [32mvite.config.ts changed, restarting server...[39m
+[2m10:10:43 pm[22m [36m[1m[vite][22m[39m server restarted.
+[2m10:11:25 pm[22m [36m[1m[vite][22m[39m [32mvite.config.ts changed, restarting server...[39m
+[2m10:11:25 pm[22m [36m[1m[vite][22m[39m [32mvite.config.ts changed, restarting server...[39m
+[2m10:11:26 pm[22m [36m[1m[vite][22m[39m server restarted.
+[2m10:11:42 pm[22m [36m[1m[vite][22m[39m [32mvite.config.ts changed, restarting server...[39m
+[2m10:11:43 pm[22m [36m[1m[vite][22m[39m server restarted.
+[2m10:13:41 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/account/ProfilePage.tsx, /src/styles/globals.css[22m
+[2m10:14:03 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/account/ProfilePage.tsx, /src/styles/globals.css[22m
+[2m10:15:09 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/MyBookingsPage.tsx, /src/styles/globals.css[22m
+[2m10:15:09 pm[22m [31m[1m[vite][22m[39m [31mInternal server error: C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\frontend\src\pages\MyBookingsPage.tsx: Adjacent JSX elements must be wrapped in an enclosing tag. Did you want a JSX fragment <>...</>? (149:4)
+
+[0m [90m 147 |[31m         [33m<[31m[33m/[31m[33mdiv[31m[33m>[31m
+ [90m 148 |[31m       )}[33m<[31m[33m/[31m[33mdiv[31m[33m>[31m
+[31m[1m>[22m[31m[90m 149 |[31m     [33m<[31m[33m/[31m[33mdiv[31m[33m>[31m
+ [90m     |[31m     [31m[1m^[22m[31m
+ [90m 150 |[31m   )[33m;[31m
+ [90m 151 |[31m }
+ [90m 152 |[31m[0m[39m
+  Plugin: [35mvite:react-babel[39m
+  File: [36mC:/Users/BHARATH M N/OneDrive/Desktop/Train_ticket/frontend/src/pages/MyBookingsPage.tsx[39m:149:4
+[33m  147 |          </div>
+  148 |        )}</div>
+  149 |      </div>
+      |      ^
+  150 |    );
+  151 |  }[39m
+      at constructor (C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\frontend\node_modules\@babel\parser\lib\index.js:369:19)
+      at TypeScriptParserMixin.raise (C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\frontend\node_modules\@babel\parser\lib\index.js:6620:19)
+      at TypeScriptParserMixin.jsxParseElementAt (C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\frontend\node_modules\@babel\parser\lib\index.js:4758:18)
+      at TypeScriptParserMixin.jsxParseElement (C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\frontend\node_modules\@babel\parser\lib\index.js:4765:17)
+      at TypeScriptParserMixin.parseExprAtom (C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\frontend\node_modules\@babel\parser\lib\index.js:4775:19)
+      at TypeScriptParserMixin.parseExprSubscripts (C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\frontend\node_modules\@babel\parser\lib\index.js:11102:23)
+      at TypeScriptParserMixin.parseUpdate (C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\frontend\node_modules\@babel\parser\lib\index.js:11087:21)
+      at TypeScriptParserMixin.parseMaybeUnary (C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\frontend\node_modules\@babel\parser\lib\index.js:11067:23)
+      at TypeScriptParserMixin.parseMaybeUnary (C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\frontend\node_modules\@babel\parser\lib\index.js:9858:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\frontend\node_modules\@babel\parser\lib\index.js:10920:61)
+      at TypeScriptParserMixin.parseExprOps (C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\frontend\node_modules\@babel\parser\lib\index.js:10925:23)
+      at TypeScriptParserMixin.parseMaybeConditional (C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\frontend\node_modules\@babel\parser\lib\index.js:10902:23)
+      at TypeScriptParserMixin.parseMaybeAssign (C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\frontend\node_modules\@babel\parser\lib\index.js:10852:21)
+      at C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\frontend\node_modules\@babel\parser\lib\index.js:9796:39
+      at TypeScriptParserMixin.tryParse (C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\frontend\node_modules\@babel\parser\lib\index.js:6928:20)
+      at TypeScriptParserMixin.parseMaybeAssign (C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\frontend\node_modules\@babel\parser\lib\index.js:9796:18)
+      at C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\frontend\node_modules\@babel\parser\lib\index.js:10821:39
+      at TypeScriptParserMixin.allowInAnd (C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\frontend\node_modules\@babel\parser\lib\index.js:12455:12)
+      at TypeScriptParserMixin.parseMaybeAssignAllowIn (C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\frontend\node_modules\@babel\parser\lib\index.js:10821:17)
+      at TypeScriptParserMixin.parseMaybeAssignAllowInOrVoidPattern (C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\frontend\node_modules\@babel\parser\lib\index.js:12522:17)
+      at TypeScriptParserMixin.parseParenAndDistinguishExpression (C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\frontend\node_modules\@babel\parser\lib\index.js:11701:28)
+      at TypeScriptParserMixin.parseExprAtom (C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\frontend\node_modules\@babel\parser\lib\index.js:11357:23)
+      at TypeScriptParserMixin.parseExprAtom (C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\frontend\node_modules\@babel\parser\lib\index.js:4780:20)
+      at TypeScriptParserMixin.parseExprSubscripts (C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\frontend\node_modules\@babel\parser\lib\index.js:11102:23)
+      at TypeScriptParserMixin.parseUpdate (C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\frontend\node_modules\@babel\parser\lib\index.js:11087:21)
+      at TypeScriptParserMixin.parseMaybeUnary (C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\frontend\node_modules\@babel\parser\lib\index.js:11067:23)
+      at TypeScriptParserMixin.parseMaybeUnary (C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\frontend\node_modules\@babel\parser\lib\index.js:9858:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\frontend\node_modules\@babel\parser\lib\index.js:10920:61)
+      at TypeScriptParserMixin.parseExprOps (C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\frontend\node_modules\@babel\parser\lib\index.js:10925:23)
+      at TypeScriptParserMixin.parseMaybeConditional (C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\frontend\node_modules\@babel\parser\lib\index.js:10902:23)
+      at TypeScriptParserMixin.parseMaybeAssign (C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\frontend\node_modules\@babel\parser\lib\index.js:10852:21)
+      at TypeScriptParserMixin.parseMaybeAssign (C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\frontend\node_modules\@babel\parser\lib\index.js:9807:20)
+      at TypeScriptParserMixin.parseExpressionBase (C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\frontend\node_modules\@babel\parser\lib\index.js:10805:23)
+      at C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\frontend\node_modules\@babel\parser\lib\index.js:10801:39
+      at TypeScriptParserMixin.allowInAnd (C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\frontend\node_modules\@babel\parser\lib\index.js:12450:16)
+      at TypeScriptParserMixin.parseExpression (C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\frontend\node_modules\@babel\parser\lib\index.js:10801:17)
+      at TypeScriptParserMixin.parseReturnStatement (C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\frontend\node_modules\@babel\parser\lib\index.js:13171:28)
+      at TypeScriptParserMixin.parseStatementContent (C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\frontend\node_modules\@babel\parser\lib\index.js:12827:21)
+      at TypeScriptParserMixin.parseStatementContent (C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\frontend\node_modules\@babel\parser\lib\index.js:9529:18)
+      at TypeScriptParserMixin.parseStatementLike (C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\frontend\node_modules\@babel\parser\lib\index.js:12796:17)
+      at TypeScriptParserMixin.parseStatementListItem (C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\frontend\node_modules\@babel\parser\lib\index.js:12776:17)
+      at TypeScriptParserMixin.parseBlockOrModuleBlockBody (C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\frontend\node_modules\@babel\parser\lib\index.js:13345:61)
+      at TypeScriptParserMixin.parseBlockBody (C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\frontend\node_modules\@babel\parser\lib\index.js:13338:10)
+      at TypeScriptParserMixin.parseBlock (C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\frontend\node_modules\@babel\parser\lib\index.js:13326:10)
+      at TypeScriptParserMixin.parseFunctionBody (C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\frontend\node_modules\@babel\parser\lib\index.js:12129:24)
+      at TypeScriptParserMixin.parseFunctionBodyAndFinish (C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\frontend\node_modules\@babel\parser\lib\index.js:12115:10)
+      at TypeScriptParserMixin.parseFunctionBodyAndFinish (C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\frontend\node_modules\@babel\parser\lib\index.js:9193:18)
+      at C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\frontend\node_modules\@babel\parser\lib\index.js:13474:12
+      at TypeScriptParserMixin.withSmartMixTopicForbiddingContext (C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\frontend\node_modules\@babel\parser\lib\index.js:12432:14)
+      at TypeScriptParserMixin.parseFunction (C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\frontend\node_modules\@babel\parser\lib\index.js:13473:10)
+[2m10:16:32 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/MyBookingsPage.tsx, /src/styles/globals.css[22m
+[2m10:16:33 pm[22m [31m[1m[vite][22m[39m [31mInternal server error: C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\frontend\src\pages\MyBookingsPage.tsx: Unexpected token (29:0)
+
+[0m [90m 27 |[31m [36mexport[31m [36mfunction[31m [33mMyBookingsPage[31m() {
+ [90m 28 |[31m   [36mconst[31m [rows[33m,[31m setRows] [33m=[31m useState[33m<[31m[33mRow[31m[][33m>[31m([])[33m;[31m
+[31m[1m>[22m[31m[90m 29 |[31m
+ [90m    |[31m [31m[1m^[22m[31m[0m[39m
+  Plugin: [35mvite:react-babel[39m
+  File: [36mC:/Users/BHARATH M N/OneDrive/Desktop/Train_ticket/frontend/src/pages/MyBookingsPage.tsx[39m:29:0
+      at constructor (C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\frontend\node_modules\@babel\parser\lib\index.js:369:19)
+      at TypeScriptParserMixin.raise (C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\frontend\node_modules\@babel\parser\lib\index.js:6620:19)
+      at TypeScriptParserMixin.unexpected (C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\frontend\node_modules\@babel\parser\lib\index.js:6640:16)
+      at TypeScriptParserMixin.parseExprAtom (C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\frontend\node_modules\@babel\parser\lib\index.js:11468:22)
+      at TypeScriptParserMixin.parseExprAtom (C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\frontend\node_modules\@babel\parser\lib\index.js:4780:20)
+      at TypeScriptParserMixin.parseExprSubscripts (C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\frontend\node_modules\@babel\parser\lib\index.js:11102:23)
+      at TypeScriptParserMixin.parseUpdate (C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\frontend\node_modules\@babel\parser\lib\index.js:11087:21)
+      at TypeScriptParserMixin.parseMaybeUnary (C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\frontend\node_modules\@babel\parser\lib\index.js:11067:23)
+      at TypeScriptParserMixin.parseMaybeUnary (C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\frontend\node_modules\@babel\parser\lib\index.js:9858:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\frontend\node_modules\@babel\parser\lib\index.js:10920:61)
+      at TypeScriptParserMixin.parseExprOps (C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\frontend\node_modules\@babel\parser\lib\index.js:10925:23)
+      at TypeScriptParserMixin.parseMaybeConditional (C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\frontend\node_modules\@babel\parser\lib\index.js:10902:23)
+      at TypeScriptParserMixin.parseMaybeAssign (C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\frontend\node_modules\@babel\parser\lib\index.js:10852:21)
+      at TypeScriptParserMixin.parseMaybeAssign (C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\frontend\node_modules\@babel\parser\lib\index.js:9807:20)
+      at TypeScriptParserMixin.parseExpressionBase (C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\frontend\node_modules\@babel\parser\lib\index.js:10805:23)
+      at C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\frontend\node_modules\@babel\parser\lib\index.js:10801:39
+      at TypeScriptParserMixin.allowInAnd (C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\frontend\node_modules\@babel\parser\lib\index.js:12450:16)
+      at TypeScriptParserMixin.parseExpression (C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\frontend\node_modules\@babel\parser\lib\index.js:10801:17)
+      at TypeScriptParserMixin.parseStatementContent (C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\frontend\node_modules\@babel\parser\lib\index.js:12924:23)
+      at TypeScriptParserMixin.parseStatementContent (C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\frontend\node_modules\@babel\parser\lib\index.js:9529:18)
+      at TypeScriptParserMixin.parseStatementLike (C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\frontend\node_modules\@babel\parser\lib\index.js:12796:17)
+      at TypeScriptParserMixin.parseStatementListItem (C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\frontend\node_modules\@babel\parser\lib\index.js:12776:17)
+      at TypeScriptParserMixin.parseBlockOrModuleBlockBody (C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\frontend\node_modules\@babel\parser\lib\index.js:13345:61)
+      at TypeScriptParserMixin.parseBlockBody (C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\frontend\node_modules\@babel\parser\lib\index.js:13338:10)
+      at TypeScriptParserMixin.parseBlock (C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\frontend\node_modules\@babel\parser\lib\index.js:13326:10)
+      at TypeScriptParserMixin.parseFunctionBody (C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\frontend\node_modules\@babel\parser\lib\index.js:12129:24)
+      at TypeScriptParserMixin.parseFunctionBodyAndFinish (C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\frontend\node_modules\@babel\parser\lib\index.js:12115:10)
+      at TypeScriptParserMixin.parseFunctionBodyAndFinish (C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\frontend\node_modules\@babel\parser\lib\index.js:9193:18)
+      at C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\frontend\node_modules\@babel\parser\lib\index.js:13474:12
+      at TypeScriptParserMixin.withSmartMixTopicForbiddingContext (C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\frontend\node_modules\@babel\parser\lib\index.js:12432:14)
+      at TypeScriptParserMixin.parseFunction (C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\frontend\node_modules\@babel\parser\lib\index.js:13473:10)
+      at TypeScriptParserMixin.parseFunctionStatement (C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\frontend\node_modules\@babel\parser\lib\index.js:13154:17)
+      at TypeScriptParserMixin.parseStatementContent (C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\frontend\node_modules\@babel\parser\lib\index.js:12820:21)
+      at TypeScriptParserMixin.parseStatementContent (C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\frontend\node_modules\@babel\parser\lib\index.js:9529:18)
+      at TypeScriptParserMixin.parseStatementLike (C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\frontend\node_modules\@babel\parser\lib\index.js:12796:17)
+      at TypeScriptParserMixin.parseStatementListItem (C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\frontend\node_modules\@babel\parser\lib\index.js:12776:17)
+      at TypeScriptParserMixin.parseExportDeclaration (C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\frontend\node_modules\@babel\parser\lib\index.js:13963:17)
+      at TypeScriptParserMixin.parseExportDeclaration (C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\frontend\node_modules\@babel\parser\lib\index.js:9650:85)
+      at TypeScriptParserMixin.maybeParseExportDeclaration (C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\frontend\node_modules\@babel\parser\lib\index.js:13922:31)
+      at TypeScriptParserMixin.parseExport (C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\frontend\node_modules\@babel\parser\lib\index.js:13841:29)
+      at TypeScriptParserMixin.parseExport (C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\frontend\node_modules\@babel\parser\lib\index.js:9406:20)
+      at TypeScriptParserMixin.parseStatementContent (C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\frontend\node_modules\@babel\parser\lib\index.js:12907:27)
+      at TypeScriptParserMixin.parseStatementContent (C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\frontend\node_modules\@babel\parser\lib\index.js:9529:18)
+      at TypeScriptParserMixin.parseStatementLike (C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\frontend\node_modules\@babel\parser\lib\index.js:12796:17)
+      at TypeScriptParserMixin.parseModuleItem (C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\frontend\node_modules\@babel\parser\lib\index.js:12773:17)
+      at TypeScriptParserMixin.parseBlockOrModuleBlockBody (C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\frontend\node_modules\@babel\parser\lib\index.js:13345:36)
+      at TypeScriptParserMixin.parseBlockBody (C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\frontend\node_modules\@babel\parser\lib\index.js:13338:10)
+      at TypeScriptParserMixin.parseProgram (C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\frontend\node_modules\@babel\parser\lib\index.js:12651:10)
+      at TypeScriptParserMixin.parseTopLevel (C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\frontend\node_modules\@babel\parser\lib\index.js:12641:25)
+      at TypeScriptParserMixin.parse (C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\frontend\node_modules\@babel\parser\lib\index.js:14517:25)
+[2m10:17:52 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/MyBookingsPage.tsx, /src/styles/globals.css[22m
+[2m10:18:00 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/MyBookingsPage.tsx, /src/styles/globals.css[22m
+[2m10:19:57 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/BookingPage.tsx, /src/styles/globals.css[22m
+[2m10:22:30 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/BookingPage.tsx, /src/styles/globals.css[22m
+[2m10:22:54 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/BookingDetailPage.tsx, /src/styles/globals.css[22m
+[2m10:25:42 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/BookingDetailPage.tsx, /src/styles/globals.css[22m
+[2m10:32:34 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/features/auth/auth.context.tsx, /src/styles/globals.css[22m
+[2m10:33:01 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/features/auth/auth.context.tsx, /src/styles/globals.css[22m
+[2m10:33:23 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/features/auth/auth.context.tsx, /src/styles/globals.css[22m
+[2m10:34:09 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/BookingPage.tsx, /src/styles/globals.css[22m
+[2m10:44:23 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/BookingPage.tsx, /src/styles/globals.css[22m
+[2m10:51:52 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/BookingPage.tsx, /src/styles/globals.css[22m

@@ -1,0 +1,21 @@
+
+> railvoyage@1.0.0 dev
+> vite
+
+
+  [32m[1mVITE[22m v7.3.6[39m  [2mready in [0m[1m916[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+[2m9:15:05 am[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/layout/Navbar.tsx, /src/styles/globals.css[22m
+[2m9:15:15 am[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/layout/Navbar.tsx, /src/styles/globals.css[22m
+[2m9:15:31 am[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/layout/Navbar.tsx, /src/styles/globals.css[22m
+[2m9:15:43 am[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/layout/Navbar.tsx, /src/styles/globals.css[22m
+[2m9:28:57 am[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/features/auth/auth.context.tsx, /src/pages/PaymentPage.tsx, /src/pages/MyBookingsPage.tsx, /src/features/trains/search.context.tsx, /src/pages/BookingPage.tsx, /src/pages/ConfirmationPage.tsx, /src/pages/BookingDetailPage.tsx, /src/pages/TrainDetailPage.tsx, /src/pages/ForgotPasswordPage.tsx, /src/pages/account/ChangePasswordPage.tsx, /src/pages/account/ProfilePage.tsx, /src/pages/ResetPasswordPage.tsx, /src/pages/VerifyEmailPage.tsx, /src/styles/globals.css[22m
+[2m9:29:39 am[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/features/auth/auth.context.tsx, /src/pages/PaymentPage.tsx, /src/pages/MyBookingsPage.tsx, /src/features/trains/search.context.tsx, /src/pages/BookingPage.tsx, /src/pages/ConfirmationPage.tsx, /src/pages/BookingDetailPage.tsx, /src/pages/TrainDetailPage.tsx, /src/pages/ForgotPasswordPage.tsx, /src/pages/account/ChangePasswordPage.tsx, /src/pages/account/ProfilePage.tsx, /src/pages/ResetPasswordPage.tsx, /src/pages/VerifyEmailPage.tsx, /src/styles/globals.css[22m
+[2m9:29:43 am[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/features/auth/auth.context.tsx, /src/pages/PaymentPage.tsx, /src/pages/MyBookingsPage.tsx, /src/features/trains/search.context.tsx, /src/pages/BookingPage.tsx, /src/pages/ConfirmationPage.tsx, /src/pages/BookingDetailPage.tsx, /src/pages/TrainDetailPage.tsx, /src/pages/ForgotPasswordPage.tsx, /src/pages/account/ChangePasswordPage.tsx, /src/pages/account/ProfilePage.tsx, /src/pages/ResetPasswordPage.tsx, /src/pages/VerifyEmailPage.tsx, /src/styles/globals.css[22m
+[2m9:30:11 am[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/features/auth/auth.context.tsx, /src/styles/globals.css[22m
+[2m9:30:24 am[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/layout/Navbar.tsx, /src/styles/globals.css[22m
+[2m9:30:35 am[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/features/auth/auth.context.tsx, /src/styles/globals.css[22m
+[2m9:56:44 am[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/features/auth/auth.context.tsx, /src/pages/PaymentPage.tsx, /src/pages/MyBookingsPage.tsx, /src/features/trains/search.context.tsx, /src/pages/BookingPage.tsx, /src/pages/ConfirmationPage.tsx, /src/pages/BookingDetailPage.tsx, /src/pages/TrainDetailPage.tsx, /src/pages/ForgotPasswordPage.tsx, /src/pages/account/ChangePasswordPage.tsx, /src/pages/account/ProfilePage.tsx, /src/pages/ResetPasswordPage.tsx, /src/pages/VerifyEmailPage.tsx, /src/styles/globals.css[22m

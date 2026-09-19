@@ -1,0 +1,13 @@
+
+> railvoyage@1.0.0 build
+> tsc && vite build
+
+[36mvite v7.3.6 [32mbuilding client environment for production...[36m[39m
+transforming...
+[32m✓[39m 2006 modules transformed.
+rendering chunks...
+computing gzip size...
+[2mdist/[22m[32mindex.html                 [39m[1m[2m  0.57 kB[22m[1m[22m[2m │ gzip:   0.36 kB[22m
+[2mdist/[22m[35massets/index-5JiQ3dWL.css  [39m[1m[2m 35.38 kB[22m[1m[22m[2m │ gzip:   7.05 kB[22m
+[2mdist/[22m[36massets/index-BVKkaewX.js   [39m[1m[2m485.87 kB[22m[1m[22m[2m │ gzip: 149.05 kB[22m
+[32m✓ built in 26.34s[39m

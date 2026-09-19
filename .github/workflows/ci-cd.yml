@@ -1,0 +1,123 @@
+name: Build and Test All Services
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+
+jobs:
+  build-backend:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        service: 
+          - authentication_module/authentication_module
+          - booking_service/booking_service
+          - payment_service
+          - notification_service
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Set up JDK 21
+        uses: actions/setup-java@v3
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+          cache: maven
+      
+      - name: Build ${{ matrix.service }}
+        run: |
+          cd ${{ matrix.service }}
+          mvn clean package -DskipTests
+      
+      - name: Run tests for ${{ matrix.service }}
+        run: |
+          cd ${{ matrix.service }}
+          mvn test
+
+  build-frontend:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: frontend/package-lock.json
+      
+      - name: Install dependencies
+        run: |
+          cd frontend
+          npm ci
+      
+      - name: Build frontend
+        run: |
+          cd frontend
+          npm run build
+      
+      - name: Run frontend tests (if available)
+        run: |
+          cd frontend
+          npm run test || true
+
+  build-docker-images:
+    needs: [build-backend, build-frontend]
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+      
+      - name: Build Docker images
+        run: |
+          docker-compose build --no-cache
+      
+      - name: Save image artifacts (optional)
+        run: |
+          mkdir -p ./docker-images
+          docker save train_ticket-auth-service:latest | gzip > ./docker-images/auth-service.tar.gz
+          docker save train_ticket-booking-service:latest | gzip > ./docker-images/booking-service.tar.gz
+          docker save train_ticket-payment-service:latest | gzip > ./docker-images/payment-service.tar.gz
+          docker save train_ticket-notification-service:latest | gzip > ./docker-images/notification-service.tar.gz
+
+  docker-compose-test:
+    needs: [build-backend]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Start services with docker-compose
+        run: |
+          docker-compose up -d
+          sleep 30
+      
+      - name: Check service health
+        run: |
+          chmod +x ./scripts/health-check.sh
+          ./scripts/health-check.sh || true
+      
+      - name: View logs if failed
+        if: failure()
+        run: docker-compose logs
+
+  integration-tests:
+    needs: [docker-compose-test]
+    runs-on: ubuntu-latest
+    if: success()
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Run integration tests
+        run: |
+          echo "Running integration tests..."
+          # Add integration test commands here
+          # Examples:
+          # - Test user registration and login flow
+          # - Test train search and booking flow
+          # - Test payment initiation
+          # - Test notifications

@@ -1,0 +1,256 @@
+services:
+  # ============================================================================
+  # PostgreSQL Database (PostgreSQL 16)
+  # ============================================================================
+  postgres:
+    image: postgres:16-alpine
+    container_name: train-ticket-postgres
+    environment:
+      POSTGRES_INITDB_ARGS: ${POSTGRES_INITDB_ARGS}
+      POSTGRES_MAX_CONNECTIONS: ${POSTGRES_MAX_CONNECTIONS}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./docker/postgres:/docker-entrypoint-initdb.d
+    networks:
+      - train-ticket-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $$POSTGRES_USER"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # ============================================================================
+  # Redis (Redis 7)
+  # ============================================================================
+  redis:
+    image: redis:7-alpine
+    container_name: train-ticket-redis
+    command: redis-server --maxmemory ${REDIS_MAX_MEMORY} --maxmemory-policy allkeys-lru
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - train-ticket-network
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # ============================================================================
+  # Authentication Service (Port 8080)
+  # ============================================================================
+  auth-service:
+    build:
+      context: ./authentication_module/authentication_module
+      dockerfile: Dockerfile
+    container_name: train-ticket-auth-service
+    ports:
+      - "8080:8080"
+    environment:
+      # Database
+      AUTH_DB_URL: ${AUTH_DB_URL}
+      AUTH_DB_USERNAME: ${AUTH_DB_USERNAME}
+      AUTH_DB_PASSWORD: ${AUTH_DB_PASSWORD}
+      
+      # Email
+      MAIL_HOST: ${MAIL_HOST}
+      MAIL_PORT: ${MAIL_PORT}
+      MAIL_USERNAME: ${MAIL_USERNAME}
+      MAIL_PASSWORD: ${MAIL_PASSWORD}
+      
+      # Frontend URL
+      APP_FRONTEND_BASE_URL: ${APP_FRONTEND_BASE_URL}
+      
+      # Security
+      JWT_SECRET: ${JWT_SECRET}
+      JWT_EXPIRATION: ${JWT_EXPIRATION}
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      - train-ticket-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/actuator/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # ============================================================================
+  # Booking Service (Port 8082)
+  # ============================================================================
+  booking-service:
+    build:
+      context: ./booking_service/booking_service
+      dockerfile: Dockerfile
+    container_name: train-ticket-booking-service
+    ports:
+      - "8082:8082"
+    environment:
+      # Database
+      BOOKING_DB_URL: ${BOOKING_DB_URL}
+      BOOKING_DB_USERNAME: ${BOOKING_DB_USERNAME}
+      BOOKING_DB_PASSWORD: ${BOOKING_DB_PASSWORD}
+      
+      # Redis
+      REDIS_HOST: ${REDIS_HOST}
+      REDIS_PORT: ${REDIS_PORT}
+      
+      # Notification Service
+      NOTIFICATION_SERVICE_URL: ${NOTIFICATION_SERVICE_URL}
+
+      # Dataset
+      APP_DATASET_PATH: ${APP_DATASET_PATH}
+
+      # Scheduling and timezone
+      TICKET_REMINDER_ENABLED: ${TICKET_REMINDER_ENABLED}
+      TICKET_REMINDER_DAYS_BEFORE: ${TICKET_REMINDER_DAYS_BEFORE}
+      APP_TIMEZONE: ${APP_TIMEZONE}
+      
+      # JWT
+      JWT_SECRET: ${JWT_SECRET}
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    networks:
+      - train-ticket-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8082/actuator/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # ============================================================================
+  # Payment Service (Port 8083)
+  # ============================================================================
+  payment-service:
+    build:
+      context: ./payment_service
+      dockerfile: Dockerfile
+    container_name: train-ticket-payment-service
+    ports:
+      - "8083:8083"
+    environment:
+      # Database
+      PAYMENT_DB_URL: ${PAYMENT_DB_URL}
+      PAYMENT_DB_USERNAME: ${PAYMENT_DB_USERNAME}
+      PAYMENT_DB_PASSWORD: ${PAYMENT_DB_PASSWORD}
+      
+      # Booking Service
+      BOOKING_SERVICE_URL: ${BOOKING_SERVICE_URL}
+      
+      # Payment Gateway
+      PAYMENT_PROVIDER: ${PAYMENT_PROVIDER}
+      PAYMENT_CURRENCY: ${PAYMENT_CURRENCY}
+      
+      # Razorpay (if using RAZORPAY provider)
+      RAZORPAY_KEY_ID: ${RAZORPAY_KEY_ID}
+      RAZORPAY_KEY_SECRET: ${RAZORPAY_KEY_SECRET}
+      RAZORPAY_WEBHOOK_SECRET: ${RAZORPAY_WEBHOOK_SECRET}
+      
+      # JWT
+      JWT_SECRET: ${JWT_SECRET}
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      - train-ticket-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8083/actuator/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # ============================================================================
+  # Notification Service (Port 8081)
+  # ============================================================================
+  notification-service:
+    build:
+      context: ./notification_service
+      dockerfile: Dockerfile
+    container_name: train-ticket-notification-service
+    ports:
+      - "8081:8081"
+    environment:
+      # Database
+      NOTIFICATION_DB_URL: ${NOTIFICATION_DB_URL}
+      NOTIFICATION_DB_USERNAME: ${NOTIFICATION_DB_USERNAME}
+      NOTIFICATION_DB_PASSWORD: ${NOTIFICATION_DB_PASSWORD}
+      
+      # Email
+      MAIL_HOST: ${MAIL_HOST}
+      MAIL_PORT: ${MAIL_PORT}
+      MAIL_USERNAME: ${MAIL_USERNAME}
+      MAIL_PASSWORD: ${MAIL_PASSWORD}
+      
+      # Service URLs
+      EUREKA_SERVER_URL: ${EUREKA_SERVER_URL}
+      CONFIG_SERVER_URL: ${CONFIG_SERVER_URL}
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      - train-ticket-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8081/actuator/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # ============================================================================
+  # Frontend (Port 5173) - React with Vite
+  # ============================================================================
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      args:
+        VITE_AUTH_SERVICE_URL: ${VITE_AUTH_SERVICE_URL}
+        VITE_BOOKING_SERVICE_URL: ${VITE_BOOKING_SERVICE_URL}
+        VITE_PAYMENT_SERVICE_URL: ${VITE_PAYMENT_SERVICE_URL}
+    container_name: train-ticket-frontend
+    ports:
+      - "5173:5173"
+    environment:
+      VITE_AUTH_SERVICE_URL: ${VITE_AUTH_SERVICE_URL}
+      VITE_BOOKING_SERVICE_URL: ${VITE_BOOKING_SERVICE_URL}
+      VITE_PAYMENT_SERVICE_URL: ${VITE_PAYMENT_SERVICE_URL}
+    depends_on:
+      - auth-service
+      - booking-service
+      - payment-service
+    networks:
+      - train-ticket-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5173"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+# ============================================================================
+# Networks
+# ============================================================================
+networks:
+  train-ticket-network:
+    driver: bridge
+
+# ============================================================================
+# Volumes
+# ============================================================================
+volumes:
+  postgres_data:
+    driver: local
+  redis_data:
+    driver: local

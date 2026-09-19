@@ -1,0 +1,297 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.0)
+
+2026-08-22T10:00:59.125+05:30  INFO 19472 --- [authentication_module] [  restartedMain] c.e.a.AuthenticationModuleApplication    : Starting AuthenticationModuleApplication using Java 21.0.11 with PID 19472 (C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\authentication_module\authentication_module\target\classes started by BHARATH M N in C:\Users\BHARATH M N\OneDrive\Desktop\Train_ticket\authentication_module\authentication_module)
+2026-08-22T10:00:59.138+05:30  INFO 19472 --- [authentication_module] [  restartedMain] c.e.a.AuthenticationModuleApplication    : No active profile set, falling back to 1 default profile: "default"
+2026-08-22T10:00:59.201+05:30  INFO 19472 --- [authentication_module] [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-08-22T10:00:59.201+05:30  INFO 19472 --- [authentication_module] [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-08-22T10:01:00.138+05:30  INFO 19472 --- [authentication_module] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-22T10:01:00.239+05:30  INFO 19472 --- [authentication_module] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 87 ms. Found 5 JPA repository interfaces.
+2026-08-22T10:01:02.550+05:30  INFO 19472 --- [authentication_module] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-08-22T10:01:02.631+05:30  INFO 19472 --- [authentication_module] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-22T10:01:02.672+05:30  INFO 19472 --- [authentication_module] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-08-22T10:01:03.006+05:30  INFO 19472 --- [authentication_module] [  restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 3803 ms
+2026-08-22T10:01:03.792+05:30  INFO 19472 --- [authentication_module] [  restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-08-22T10:01:04.169+05:30  INFO 19472 --- [authentication_module] [  restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-08-22T10:01:07.893+05:30  INFO 19472 --- [authentication_module] [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-22T10:01:08.135+05:30  INFO 19472 --- [authentication_module] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-08-22T10:01:08.871+05:30  INFO 19472 --- [authentication_module] [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@97a3888
+2026-08-22T10:01:08.875+05:30  INFO 19472 --- [authentication_module] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-08-22T10:01:09.580+05:30  INFO 19472 --- [authentication_module] [  restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/postgres]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.0
+	Default catalog/schema: postgres/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-08-22T10:01:18.701+05:30  INFO 19472 --- [authentication_module] [  restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-22T10:01:19.225+05:30  INFO 19472 --- [authentication_module] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-22T10:01:19.679+05:30  INFO 19472 --- [authentication_module] [  restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-08-22T10:01:23.004+05:30  INFO 19472 --- [authentication_module] [  restartedMain] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2026-08-22T10:01:23.009+05:30  WARN 19472 --- [authentication_module] [  restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2026-08-22T10:01:23.212+05:30  WARN 19472 --- [authentication_module] [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-08-22T10:01:24.589+05:30 DEBUG 19472 --- [authentication_module] [  restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2026-08-22T10:01:25.089+05:30 TRACE 19472 --- [authentication_module] [  restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	c.e.a.C.ProfileController:
+	{GET [/profile/get-profile]}: getProfile(Authentication)
+	{PUT [/profile/update]}: updateProfile(Authentication,UpdateProfileRequestDTO)
+2026-08-22T10:01:25.114+05:30 TRACE 19472 --- [authentication_module] [  restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	c.e.a.C.UserController:
+	{POST [/auth/logout]}: logout(LogoutRequestDTO)
+	{POST [/auth/login]}: loginUser(LoginRequestDTO)
+	{POST [/auth/register]}: registerUser(RegisterRequestDTO)
+	{POST [/auth/forgot-password]}: forgotPassword(ForgotPasswordRequestDTO)
+	{PUT [/auth/change-password]}: changePassword(Authentication,ChangePasswordRequestDTO)
+	{POST [/auth/reset-password]}: resetPassword(ResetPasswordRequestDTO)
+	{POST [/auth/refresh-token]}: refreshToken(RefreshTokenRequestDTO)
+	{GET [/auth/verify-email]}: verifyEmail(String)
+2026-08-22T10:01:25.131+05:30 TRACE 19472 --- [authentication_module] [  restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	o.s.b.w.a.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2026-08-22T10:01:25.138+05:30 DEBUG 19472 --- [authentication_module] [  restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 12 mappings in 'requestMappingHandlerMapping'
+2026-08-22T10:01:26.571+05:30  INFO 19472 --- [authentication_module] [  restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-08-22T10:01:26.582+05:30  INFO 19472 --- [authentication_module] [  restartedMain] c.e.a.AuthenticationModuleApplication    : Started AuthenticationModuleApplication in 28.051 seconds (process running for 28.921)
+2026-08-22T10:01:29.282+05:30  INFO 19472 --- [authentication_module] [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-22T10:01:29.283+05:30  INFO 19472 --- [authentication_module] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-08-22T10:01:29.286+05:30  INFO 19472 --- [authentication_module] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-08-22T10:01:29.307+05:30 DEBUG 19472 --- [authentication_module] [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /auth/login
+2026-08-22T10:01:29.339+05:30 DEBUG 19472 --- [authentication_module] [nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-08-22T10:01:29.347+05:30 DEBUG 19472 --- [authentication_module] [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /auth/login
+2026-08-22T10:01:29.422+05:30 TRACE 19472 --- [authentication_module] [nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.authentication_module.Controller.UserController#loginUser(LoginRequestDTO)
+2026-08-22T10:01:30.077+05:30  WARN 19472 --- [authentication_module] [nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.example.authentication_module.Exception.UserNotFoundException: User not found: User not found!]
+2026-08-22T10:01:44.318+05:30 DEBUG 19472 --- [authentication_module] [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /auth/refresh-token
+2026-08-22T10:01:44.322+05:30 DEBUG 19472 --- [authentication_module] [nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-08-22T10:01:44.324+05:30 DEBUG 19472 --- [authentication_module] [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured POST /auth/refresh-token
+2026-08-22T10:01:44.325+05:30 TRACE 19472 --- [authentication_module] [nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.authentication_module.Controller.UserController#refreshToken(RefreshTokenRequestDTO)
+Hibernate: select rt1_0.id,rt1_0.created_at,rt1_0.expiry_date,rt1_0.revoked,rt1_0.token,rt1_0.user_id from refresh_tokens rt1_0 where rt1_0.token=?
+Hibernate: select um1_0.id,um1_0.account_non_expired,um1_0.account_non_locked,um1_0.address,um1_0.city,um1_0.country,um1_0.created_at,um1_0.credentials_non_expired,um1_0.date_of_birth,um1_0.email,um1_0.email_verified,um1_0.enabled,um1_0.last_accessed_at,um1_0.login_time,um1_0.password,um1_0.phone_number,um1_0.role,um1_0.state,um1_0.updated_at,um1_0.username from users um1_0 where um1_0.id=?
+2026-08-22T10:01:47.863+05:30 DEBUG 19472 --- [authentication_module] [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing POST /auth/logout
+2026-08-22T10:01:47.901+05:30 DEBUG 19472 --- [authentication_module] [nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-08-22T10:01:47.903+05:30 DEBUG 19472 --- [authentication_module] [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured POST /auth/logout
+2026-08-22T10:01:47.904+05:30 TRACE 19472 --- [authentication_module] [nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.authentication_module.Controller.UserController#logout(LogoutRequestDTO)
+Hibernate: select rt1_0.id,rt1_0.created_at,rt1_0.expiry_date,rt1_0.revoked,rt1_0.token,rt1_0.user_id from refresh_tokens rt1_0 where rt1_0.token=?
+Hibernate: update refresh_tokens set created_at=?,expiry_date=?,revoked=?,token=?,user_id=? where id=?
+2026-08-22T10:01:48.298+05:30 DEBUG 19472 --- [authentication_module] [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing POST /auth/forgot-password
+2026-08-22T10:01:48.300+05:30 DEBUG 19472 --- [authentication_module] [nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-08-22T10:01:48.301+05:30 DEBUG 19472 --- [authentication_module] [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured POST /auth/forgot-password
+2026-08-22T10:01:48.302+05:30 TRACE 19472 --- [authentication_module] [nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.authentication_module.Controller.UserController#forgotPassword(ForgotPasswordRequestDTO)
+Hibernate: select um1_0.id,um1_0.account_non_expired,um1_0.account_non_locked,um1_0.address,um1_0.city,um1_0.country,um1_0.created_at,um1_0.credentials_non_expired,um1_0.date_of_birth,um1_0.email,um1_0.email_verified,um1_0.enabled,um1_0.last_accessed_at,um1_0.login_time,um1_0.password,um1_0.phone_number,um1_0.role,um1_0.state,um1_0.updated_at,um1_0.username from users um1_0 where um1_0.email=?
+Hibernate: insert into password_reset_tokens (expiry_date,token,used,user_id) values (?,?,?,?)
+[EmailSenderService] Preparing password reset email to: browser.e2e.probe@example.com
+[EmailSenderService] Setting From: t81958319@gmail.com
+[EmailSenderService] Sending password reset email...
+[EmailSenderService] Password reset email sent successfully to: browser.e2e.probe@example.com
+2026-08-22T10:02:37.964+05:30 DEBUG 19472 --- [authentication_module] [nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing POST /auth/login
+2026-08-22T10:02:37.966+05:30 DEBUG 19472 --- [authentication_module] [nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-08-22T10:02:37.967+05:30 DEBUG 19472 --- [authentication_module] [nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured POST /auth/login
+2026-08-22T10:02:37.969+05:30 TRACE 19472 --- [authentication_module] [nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.authentication_module.Controller.UserController#loginUser(LoginRequestDTO)
+Hibernate: select um1_0.id,um1_0.account_non_expired,um1_0.account_non_locked,um1_0.address,um1_0.city,um1_0.country,um1_0.created_at,um1_0.credentials_non_expired,um1_0.date_of_birth,um1_0.email,um1_0.email_verified,um1_0.enabled,um1_0.last_accessed_at,um1_0.login_time,um1_0.password,um1_0.phone_number,um1_0.role,um1_0.state,um1_0.updated_at,um1_0.username from users um1_0 where um1_0.email=?
+Hibernate: update users set account_non_expired=?,account_non_locked=?,address=?,city=?,country=?,credentials_non_expired=?,date_of_birth=?,email=?,email_verified=?,enabled=?,last_accessed_at=?,login_time=?,password=?,phone_number=?,role=?,state=?,updated_at=?,username=? where id=?
+Hibernate: insert into refresh_tokens (created_at,expiry_date,revoked,token,user_id) values (?,?,?,?,?)
+2026-08-22T10:02:38.201+05:30 DEBUG 19472 --- [authentication_module] [nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /profile/get-profile
+email: browser.e2e.probe@example.com
+Hibernate: select um1_0.id,um1_0.account_non_expired,um1_0.account_non_locked,um1_0.address,um1_0.city,um1_0.country,um1_0.created_at,um1_0.credentials_non_expired,um1_0.date_of_birth,um1_0.email,um1_0.email_verified,um1_0.enabled,um1_0.last_accessed_at,um1_0.login_time,um1_0.password,um1_0.phone_number,um1_0.role,um1_0.state,um1_0.updated_at,um1_0.username from users um1_0 where um1_0.email=?
+looking for emailbrowser.e2e.probe@example.com
+2026-08-22T10:02:38.416+05:30 DEBUG 19472 --- [authentication_module] [nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /profile/get-profile
+2026-08-22T10:02:38.417+05:30 TRACE 19472 --- [authentication_module] [nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.authentication_module.Controller.ProfileController#getProfile(Authentication)
+Hibernate: select um1_0.id,um1_0.account_non_expired,um1_0.account_non_locked,um1_0.address,um1_0.city,um1_0.country,um1_0.created_at,um1_0.credentials_non_expired,um1_0.date_of_birth,um1_0.email,um1_0.email_verified,um1_0.enabled,um1_0.last_accessed_at,um1_0.login_time,um1_0.password,um1_0.phone_number,um1_0.role,um1_0.state,um1_0.updated_at,um1_0.username from users um1_0 where um1_0.email=?
+2026-08-22T10:02:48.639+05:30 DEBUG 19472 --- [authentication_module] [nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /profile/get-profile
+email: browser.e2e.probe@example.com
+Hibernate: select um1_0.id,um1_0.account_non_expired,um1_0.account_non_locked,um1_0.address,um1_0.city,um1_0.country,um1_0.created_at,um1_0.credentials_non_expired,um1_0.date_of_birth,um1_0.email,um1_0.email_verified,um1_0.enabled,um1_0.last_accessed_at,um1_0.login_time,um1_0.password,um1_0.phone_number,um1_0.role,um1_0.state,um1_0.updated_at,um1_0.username from users um1_0 where um1_0.email=?
+looking for emailbrowser.e2e.probe@example.com
+2026-08-22T10:02:48.673+05:30 DEBUG 19472 --- [authentication_module] [nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /profile/get-profile
+2026-08-22T10:02:48.674+05:30 TRACE 19472 --- [authentication_module] [nio-8080-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.authentication_module.Controller.ProfileController#getProfile(Authentication)
+Hibernate: select um1_0.id,um1_0.account_non_expired,um1_0.account_non_locked,um1_0.address,um1_0.city,um1_0.country,um1_0.created_at,um1_0.credentials_non_expired,um1_0.date_of_birth,um1_0.email,um1_0.email_verified,um1_0.enabled,um1_0.last_accessed_at,um1_0.login_time,um1_0.password,um1_0.phone_number,um1_0.role,um1_0.state,um1_0.updated_at,um1_0.username from users um1_0 where um1_0.email=?
+2026-08-22T10:02:48.756+05:30 DEBUG 19472 --- [authentication_module] [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /profile/get-profile
+email: browser.e2e.probe@example.com
+Hibernate: select um1_0.id,um1_0.account_non_expired,um1_0.account_non_locked,um1_0.address,um1_0.city,um1_0.country,um1_0.created_at,um1_0.credentials_non_expired,um1_0.date_of_birth,um1_0.email,um1_0.email_verified,um1_0.enabled,um1_0.last_accessed_at,um1_0.login_time,um1_0.password,um1_0.phone_number,um1_0.role,um1_0.state,um1_0.updated_at,um1_0.username from users um1_0 where um1_0.email=?
+looking for emailbrowser.e2e.probe@example.com
+2026-08-22T10:02:48.783+05:30 DEBUG 19472 --- [authentication_module] [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /profile/get-profile
+2026-08-22T10:02:48.802+05:30 TRACE 19472 --- [authentication_module] [io-8080-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.authentication_module.Controller.ProfileController#getProfile(Authentication)
+Hibernate: select um1_0.id,um1_0.account_non_expired,um1_0.account_non_locked,um1_0.address,um1_0.city,um1_0.country,um1_0.created_at,um1_0.credentials_non_expired,um1_0.date_of_birth,um1_0.email,um1_0.email_verified,um1_0.enabled,um1_0.last_accessed_at,um1_0.login_time,um1_0.password,um1_0.phone_number,um1_0.role,um1_0.state,um1_0.updated_at,um1_0.username from users um1_0 where um1_0.email=?
+2026-08-22T10:02:54.944+05:30 DEBUG 19472 --- [authentication_module] [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /auth/refresh-token
+2026-08-22T10:02:54.961+05:30 DEBUG 19472 --- [authentication_module] [nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-08-22T10:02:54.962+05:30 DEBUG 19472 --- [authentication_module] [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /auth/refresh-token
+2026-08-22T10:02:54.964+05:30 TRACE 19472 --- [authentication_module] [nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.authentication_module.Controller.UserController#refreshToken(RefreshTokenRequestDTO)
+2026-08-22T10:02:54.965+05:30 DEBUG 19472 --- [authentication_module] [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /auth/refresh-token
+2026-08-22T10:02:54.968+05:30 DEBUG 19472 --- [authentication_module] [nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-08-22T10:02:54.970+05:30 DEBUG 19472 --- [authentication_module] [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured POST /auth/refresh-token
+2026-08-22T10:02:54.971+05:30 TRACE 19472 --- [authentication_module] [nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.authentication_module.Controller.UserController#refreshToken(RefreshTokenRequestDTO)
+Hibernate: select rt1_0.id,rt1_0.created_at,rt1_0.expiry_date,rt1_0.revoked,rt1_0.token,rt1_0.user_id from refresh_tokens rt1_0 where rt1_0.token=?
+Hibernate: select um1_0.id,um1_0.account_non_expired,um1_0.account_non_locked,um1_0.address,um1_0.city,um1_0.country,um1_0.created_at,um1_0.credentials_non_expired,um1_0.date_of_birth,um1_0.email,um1_0.email_verified,um1_0.enabled,um1_0.last_accessed_at,um1_0.login_time,um1_0.password,um1_0.phone_number,um1_0.role,um1_0.state,um1_0.updated_at,um1_0.username from users um1_0 where um1_0.id=?
+Hibernate: select rt1_0.id,rt1_0.created_at,rt1_0.expiry_date,rt1_0.revoked,rt1_0.token,rt1_0.user_id from refresh_tokens rt1_0 where rt1_0.token=?
+2026-08-22T10:02:55.042+05:30 DEBUG 19472 --- [authentication_module] [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /auth/refresh-token
+Hibernate: select um1_0.id,um1_0.account_non_expired,um1_0.account_non_locked,um1_0.address,um1_0.city,um1_0.country,um1_0.created_at,um1_0.credentials_non_expired,um1_0.date_of_birth,um1_0.email,um1_0.email_verified,um1_0.enabled,um1_0.last_accessed_at,um1_0.login_time,um1_0.password,um1_0.phone_number,um1_0.role,um1_0.state,um1_0.updated_at,um1_0.username from users um1_0 where um1_0.id=?
+2026-08-22T10:02:55.053+05:30 DEBUG 19472 --- [authentication_module] [nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-08-22T10:02:55.054+05:30 DEBUG 19472 --- [authentication_module] [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured POST /auth/refresh-token
+2026-08-22T10:02:55.055+05:30 TRACE 19472 --- [authentication_module] [nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.authentication_module.Controller.UserController#refreshToken(RefreshTokenRequestDTO)
+Hibernate: select rt1_0.id,rt1_0.created_at,rt1_0.expiry_date,rt1_0.revoked,rt1_0.token,rt1_0.user_id from refresh_tokens rt1_0 where rt1_0.token=?
+Hibernate: select um1_0.id,um1_0.account_non_expired,um1_0.account_non_locked,um1_0.address,um1_0.city,um1_0.country,um1_0.created_at,um1_0.credentials_non_expired,um1_0.date_of_birth,um1_0.email,um1_0.email_verified,um1_0.enabled,um1_0.last_accessed_at,um1_0.login_time,um1_0.password,um1_0.phone_number,um1_0.role,um1_0.state,um1_0.updated_at,um1_0.username from users um1_0 where um1_0.id=?
+2026-08-22T10:02:55.131+05:30 DEBUG 19472 --- [authentication_module] [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /profile/get-profile
+email: browser.e2e.probe@example.com
+Hibernate: select um1_0.id,um1_0.account_non_expired,um1_0.account_non_locked,um1_0.address,um1_0.city,um1_0.country,um1_0.created_at,um1_0.credentials_non_expired,um1_0.date_of_birth,um1_0.email,um1_0.email_verified,um1_0.enabled,um1_0.last_accessed_at,um1_0.login_time,um1_0.password,um1_0.phone_number,um1_0.role,um1_0.state,um1_0.updated_at,um1_0.username from users um1_0 where um1_0.email=?
+looking for emailbrowser.e2e.probe@example.com
+2026-08-22T10:02:55.161+05:30 DEBUG 19472 --- [authentication_module] [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /profile/get-profile
+2026-08-22T10:02:55.166+05:30 TRACE 19472 --- [authentication_module] [nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.authentication_module.Controller.ProfileController#getProfile(Authentication)
+Hibernate: select um1_0.id,um1_0.account_non_expired,um1_0.account_non_locked,um1_0.address,um1_0.city,um1_0.country,um1_0.created_at,um1_0.credentials_non_expired,um1_0.date_of_birth,um1_0.email,um1_0.email_verified,um1_0.enabled,um1_0.last_accessed_at,um1_0.login_time,um1_0.password,um1_0.phone_number,um1_0.role,um1_0.state,um1_0.updated_at,um1_0.username from users um1_0 where um1_0.email=?
+2026-08-22T10:02:55.185+05:30 DEBUG 19472 --- [authentication_module] [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /profile/get-profile
+email: browser.e2e.probe@example.com
+Hibernate: select um1_0.id,um1_0.account_non_expired,um1_0.account_non_locked,um1_0.address,um1_0.city,um1_0.country,um1_0.created_at,um1_0.credentials_non_expired,um1_0.date_of_birth,um1_0.email,um1_0.email_verified,um1_0.enabled,um1_0.last_accessed_at,um1_0.login_time,um1_0.password,um1_0.phone_number,um1_0.role,um1_0.state,um1_0.updated_at,um1_0.username from users um1_0 where um1_0.email=?
+looking for emailbrowser.e2e.probe@example.com
+2026-08-22T10:02:55.221+05:30 DEBUG 19472 --- [authentication_module] [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /profile/get-profile
+2026-08-22T10:02:55.223+05:30 TRACE 19472 --- [authentication_module] [nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.authentication_module.Controller.ProfileController#getProfile(Authentication)
+Hibernate: select um1_0.id,um1_0.account_non_expired,um1_0.account_non_locked,um1_0.address,um1_0.city,um1_0.country,um1_0.created_at,um1_0.credentials_non_expired,um1_0.date_of_birth,um1_0.email,um1_0.email_verified,um1_0.enabled,um1_0.last_accessed_at,um1_0.login_time,um1_0.password,um1_0.phone_number,um1_0.role,um1_0.state,um1_0.updated_at,um1_0.username from users um1_0 where um1_0.email=?
+2026-08-22T10:02:55.244+05:30 DEBUG 19472 --- [authentication_module] [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /profile/get-profile
+email: browser.e2e.probe@example.com
+Hibernate: select um1_0.id,um1_0.account_non_expired,um1_0.account_non_locked,um1_0.address,um1_0.city,um1_0.country,um1_0.created_at,um1_0.credentials_non_expired,um1_0.date_of_birth,um1_0.email,um1_0.email_verified,um1_0.enabled,um1_0.last_accessed_at,um1_0.login_time,um1_0.password,um1_0.phone_number,um1_0.role,um1_0.state,um1_0.updated_at,um1_0.username from users um1_0 where um1_0.email=?
+looking for emailbrowser.e2e.probe@example.com
+2026-08-22T10:02:55.262+05:30 DEBUG 19472 --- [authentication_module] [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /profile/get-profile
+2026-08-22T10:02:55.263+05:30 TRACE 19472 --- [authentication_module] [nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.authentication_module.Controller.ProfileController#getProfile(Authentication)
+Hibernate: select um1_0.id,um1_0.account_non_expired,um1_0.account_non_locked,um1_0.address,um1_0.city,um1_0.country,um1_0.created_at,um1_0.credentials_non_expired,um1_0.date_of_birth,um1_0.email,um1_0.email_verified,um1_0.enabled,um1_0.last_accessed_at,um1_0.login_time,um1_0.password,um1_0.phone_number,um1_0.role,um1_0.state,um1_0.updated_at,um1_0.username from users um1_0 where um1_0.email=?
+2026-08-22T10:02:55.516+05:30 DEBUG 19472 --- [authentication_module] [nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing POST /auth/logout
+2026-08-22T10:02:55.526+05:30 DEBUG 19472 --- [authentication_module] [nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-08-22T10:02:55.530+05:30 DEBUG 19472 --- [authentication_module] [nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured POST /auth/logout
+2026-08-22T10:02:55.532+05:30 TRACE 19472 --- [authentication_module] [nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.authentication_module.Controller.UserController#logout(LogoutRequestDTO)
+Hibernate: select rt1_0.id,rt1_0.created_at,rt1_0.expiry_date,rt1_0.revoked,rt1_0.token,rt1_0.user_id from refresh_tokens rt1_0 where rt1_0.token=?
+Hibernate: update refresh_tokens set created_at=?,expiry_date=?,revoked=?,token=?,user_id=? where id=?
+2026-08-22T10:02:56.997+05:30 DEBUG 19472 --- [authentication_module] [nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing POST /auth/login
+2026-08-22T10:02:56.999+05:30 DEBUG 19472 --- [authentication_module] [nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-08-22T10:02:57.000+05:30 DEBUG 19472 --- [authentication_module] [nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured POST /auth/login
+2026-08-22T10:02:57.001+05:30 TRACE 19472 --- [authentication_module] [nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.authentication_module.Controller.UserController#loginUser(LoginRequestDTO)
+Hibernate: select um1_0.id,um1_0.account_non_expired,um1_0.account_non_locked,um1_0.address,um1_0.city,um1_0.country,um1_0.created_at,um1_0.credentials_non_expired,um1_0.date_of_birth,um1_0.email,um1_0.email_verified,um1_0.enabled,um1_0.last_accessed_at,um1_0.login_time,um1_0.password,um1_0.phone_number,um1_0.role,um1_0.state,um1_0.updated_at,um1_0.username from users um1_0 where um1_0.email=?
+Hibernate: update users set account_non_expired=?,account_non_locked=?,address=?,city=?,country=?,credentials_non_expired=?,date_of_birth=?,email=?,email_verified=?,enabled=?,last_accessed_at=?,login_time=?,password=?,phone_number=?,role=?,state=?,updated_at=?,username=? where id=?
+Hibernate: insert into refresh_tokens (created_at,expiry_date,revoked,token,user_id) values (?,?,?,?,?)
+2026-08-22T10:02:57.353+05:30 DEBUG 19472 --- [authentication_module] [nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /profile/get-profile
+email: browser.e2e.probe@example.com
+Hibernate: select um1_0.id,um1_0.account_non_expired,um1_0.account_non_locked,um1_0.address,um1_0.city,um1_0.country,um1_0.created_at,um1_0.credentials_non_expired,um1_0.date_of_birth,um1_0.email,um1_0.email_verified,um1_0.enabled,um1_0.last_accessed_at,um1_0.login_time,um1_0.password,um1_0.phone_number,um1_0.role,um1_0.state,um1_0.updated_at,um1_0.username from users um1_0 where um1_0.email=?
+looking for emailbrowser.e2e.probe@example.com
+2026-08-22T10:02:57.366+05:30 DEBUG 19472 --- [authentication_module] [nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /profile/get-profile
+2026-08-22T10:02:57.367+05:30 TRACE 19472 --- [authentication_module] [nio-8080-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.authentication_module.Controller.ProfileController#getProfile(Authentication)
+Hibernate: select um1_0.id,um1_0.account_non_expired,um1_0.account_non_locked,um1_0.address,um1_0.city,um1_0.country,um1_0.created_at,um1_0.credentials_non_expired,um1_0.date_of_birth,um1_0.email,um1_0.email_verified,um1_0.enabled,um1_0.last_accessed_at,um1_0.login_time,um1_0.password,um1_0.phone_number,um1_0.role,um1_0.state,um1_0.updated_at,um1_0.username from users um1_0 where um1_0.email=?
+2026-08-22T10:15:11.818+05:30 DEBUG 19472 --- [authentication_module] [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing POST /auth/login
+2026-08-22T10:15:11.820+05:30 DEBUG 19472 --- [authentication_module] [io-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-08-22T10:15:11.821+05:30 DEBUG 19472 --- [authentication_module] [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured POST /auth/login
+2026-08-22T10:15:11.822+05:30 TRACE 19472 --- [authentication_module] [io-8080-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.authentication_module.Controller.UserController#loginUser(LoginRequestDTO)
+Hibernate: select um1_0.id,um1_0.account_non_expired,um1_0.account_non_locked,um1_0.address,um1_0.city,um1_0.country,um1_0.created_at,um1_0.credentials_non_expired,um1_0.date_of_birth,um1_0.email,um1_0.email_verified,um1_0.enabled,um1_0.last_accessed_at,um1_0.login_time,um1_0.password,um1_0.phone_number,um1_0.role,um1_0.state,um1_0.updated_at,um1_0.username from users um1_0 where um1_0.email=?
+Hibernate: update users set account_non_expired=?,account_non_locked=?,address=?,city=?,country=?,credentials_non_expired=?,date_of_birth=?,email=?,email_verified=?,enabled=?,last_accessed_at=?,login_time=?,password=?,phone_number=?,role=?,state=?,updated_at=?,username=? where id=?
+Hibernate: insert into refresh_tokens (created_at,expiry_date,revoked,token,user_id) values (?,?,?,?,?)
+2026-08-22T10:15:12.310+05:30 DEBUG 19472 --- [authentication_module] [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /profile/get-profile
+email: bharathmn006@gmail.com
+Hibernate: select um1_0.id,um1_0.account_non_expired,um1_0.account_non_locked,um1_0.address,um1_0.city,um1_0.country,um1_0.created_at,um1_0.credentials_non_expired,um1_0.date_of_birth,um1_0.email,um1_0.email_verified,um1_0.enabled,um1_0.last_accessed_at,um1_0.login_time,um1_0.password,um1_0.phone_number,um1_0.role,um1_0.state,um1_0.updated_at,um1_0.username from users um1_0 where um1_0.email=?
+looking for emailbharathmn006@gmail.com
+2026-08-22T10:15:12.322+05:30 DEBUG 19472 --- [authentication_module] [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /profile/get-profile
+2026-08-22T10:15:12.323+05:30 TRACE 19472 --- [authentication_module] [nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.authentication_module.Controller.ProfileController#getProfile(Authentication)
+Hibernate: select um1_0.id,um1_0.account_non_expired,um1_0.account_non_locked,um1_0.address,um1_0.city,um1_0.country,um1_0.created_at,um1_0.credentials_non_expired,um1_0.date_of_birth,um1_0.email,um1_0.email_verified,um1_0.enabled,um1_0.last_accessed_at,um1_0.login_time,um1_0.password,um1_0.phone_number,um1_0.role,um1_0.state,um1_0.updated_at,um1_0.username from users um1_0 where um1_0.email=?
+2026-08-22T10:15:17.751+05:30 DEBUG 19472 --- [authentication_module] [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /profile/get-profile
+email: bharathmn006@gmail.com
+Hibernate: select um1_0.id,um1_0.account_non_expired,um1_0.account_non_locked,um1_0.address,um1_0.city,um1_0.country,um1_0.created_at,um1_0.credentials_non_expired,um1_0.date_of_birth,um1_0.email,um1_0.email_verified,um1_0.enabled,um1_0.last_accessed_at,um1_0.login_time,um1_0.password,um1_0.phone_number,um1_0.role,um1_0.state,um1_0.updated_at,um1_0.username from users um1_0 where um1_0.email=?
+looking for emailbharathmn006@gmail.com
+2026-08-22T10:15:17.780+05:30 DEBUG 19472 --- [authentication_module] [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /profile/get-profile
+2026-08-22T10:15:17.783+05:30 TRACE 19472 --- [authentication_module] [nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.authentication_module.Controller.ProfileController#getProfile(Authentication)
+Hibernate: select um1_0.id,um1_0.account_non_expired,um1_0.account_non_locked,um1_0.address,um1_0.city,um1_0.country,um1_0.created_at,um1_0.credentials_non_expired,um1_0.date_of_birth,um1_0.email,um1_0.email_verified,um1_0.enabled,um1_0.last_accessed_at,um1_0.login_time,um1_0.password,um1_0.phone_number,um1_0.role,um1_0.state,um1_0.updated_at,um1_0.username from users um1_0 where um1_0.email=?
+2026-08-22T10:15:17.806+05:30 DEBUG 19472 --- [authentication_module] [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /profile/get-profile
+email: bharathmn006@gmail.com
+Hibernate: select um1_0.id,um1_0.account_non_expired,um1_0.account_non_locked,um1_0.address,um1_0.city,um1_0.country,um1_0.created_at,um1_0.credentials_non_expired,um1_0.date_of_birth,um1_0.email,um1_0.email_verified,um1_0.enabled,um1_0.last_accessed_at,um1_0.login_time,um1_0.password,um1_0.phone_number,um1_0.role,um1_0.state,um1_0.updated_at,um1_0.username from users um1_0 where um1_0.email=?
+looking for emailbharathmn006@gmail.com
+2026-08-22T10:15:17.840+05:30 DEBUG 19472 --- [authentication_module] [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /profile/get-profile
+2026-08-22T10:15:17.842+05:30 TRACE 19472 --- [authentication_module] [nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.authentication_module.Controller.ProfileController#getProfile(Authentication)
+Hibernate: select um1_0.id,um1_0.account_non_expired,um1_0.account_non_locked,um1_0.address,um1_0.city,um1_0.country,um1_0.created_at,um1_0.credentials_non_expired,um1_0.date_of_birth,um1_0.email,um1_0.email_verified,um1_0.enabled,um1_0.last_accessed_at,um1_0.login_time,um1_0.password,um1_0.phone_number,um1_0.role,um1_0.state,um1_0.updated_at,um1_0.username from users um1_0 where um1_0.email=?
+2026-08-22T11:34:45.981+05:30  WARN 19472 --- [authentication_module] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h18m6s586ms68µs300ns).
+2026-08-22T11:34:59.374+05:30 DEBUG 19472 --- [authentication_module] [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /profile/get-profile
+email: bharathmn006@gmail.com
+Hibernate: select um1_0.id,um1_0.account_non_expired,um1_0.account_non_locked,um1_0.address,um1_0.city,um1_0.country,um1_0.created_at,um1_0.credentials_non_expired,um1_0.date_of_birth,um1_0.email,um1_0.email_verified,um1_0.enabled,um1_0.last_accessed_at,um1_0.login_time,um1_0.password,um1_0.phone_number,um1_0.role,um1_0.state,um1_0.updated_at,um1_0.username from users um1_0 where um1_0.email=?
+looking for emailbharathmn006@gmail.com
+2026-08-22T11:34:59.632+05:30 DEBUG 19472 --- [authentication_module] [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /profile/get-profile
+2026-08-22T11:34:59.679+05:30 TRACE 19472 --- [authentication_module] [nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.authentication_module.Controller.ProfileController#getProfile(Authentication)
+Hibernate: select um1_0.id,um1_0.account_non_expired,um1_0.account_non_locked,um1_0.address,um1_0.city,um1_0.country,um1_0.created_at,um1_0.credentials_non_expired,um1_0.date_of_birth,um1_0.email,um1_0.email_verified,um1_0.enabled,um1_0.last_accessed_at,um1_0.login_time,um1_0.password,um1_0.phone_number,um1_0.role,um1_0.state,um1_0.updated_at,um1_0.username from users um1_0 where um1_0.email=?
+2026-08-22T11:34:59.804+05:30 DEBUG 19472 --- [authentication_module] [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /profile/get-profile
+email: bharathmn006@gmail.com
+Hibernate: select um1_0.id,um1_0.account_non_expired,um1_0.account_non_locked,um1_0.address,um1_0.city,um1_0.country,um1_0.created_at,um1_0.credentials_non_expired,um1_0.date_of_birth,um1_0.email,um1_0.email_verified,um1_0.enabled,um1_0.last_accessed_at,um1_0.login_time,um1_0.password,um1_0.phone_number,um1_0.role,um1_0.state,um1_0.updated_at,um1_0.username from users um1_0 where um1_0.email=?
+looking for emailbharathmn006@gmail.com
+2026-08-22T11:34:59.823+05:30 DEBUG 19472 --- [authentication_module] [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /profile/get-profile
+2026-08-22T11:34:59.830+05:30 TRACE 19472 --- [authentication_module] [nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.authentication_module.Controller.ProfileController#getProfile(Authentication)
+Hibernate: select um1_0.id,um1_0.account_non_expired,um1_0.account_non_locked,um1_0.address,um1_0.city,um1_0.country,um1_0.created_at,um1_0.credentials_non_expired,um1_0.date_of_birth,um1_0.email,um1_0.email_verified,um1_0.enabled,um1_0.last_accessed_at,um1_0.login_time,um1_0.password,um1_0.phone_number,um1_0.role,um1_0.state,um1_0.updated_at,um1_0.username from users um1_0 where um1_0.email=?
+2026-08-22T11:35:03.442+05:30 DEBUG 19472 --- [authentication_module] [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /profile/get-profile
+email: bharathmn006@gmail.com
+Hibernate: select um1_0.id,um1_0.account_non_expired,um1_0.account_non_locked,um1_0.address,um1_0.city,um1_0.country,um1_0.created_at,um1_0.credentials_non_expired,um1_0.date_of_birth,um1_0.email,um1_0.email_verified,um1_0.enabled,um1_0.last_accessed_at,um1_0.login_time,um1_0.password,um1_0.phone_number,um1_0.role,um1_0.state,um1_0.updated_at,um1_0.username from users um1_0 where um1_0.email=?
+looking for emailbharathmn006@gmail.com
+2026-08-22T11:35:03.583+05:30 DEBUG 19472 --- [authentication_module] [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /profile/get-profile
+2026-08-22T11:35:03.589+05:30 TRACE 19472 --- [authentication_module] [nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.authentication_module.Controller.ProfileController#getProfile(Authentication)
+Hibernate: select um1_0.id,um1_0.account_non_expired,um1_0.account_non_locked,um1_0.address,um1_0.city,um1_0.country,um1_0.created_at,um1_0.credentials_non_expired,um1_0.date_of_birth,um1_0.email,um1_0.email_verified,um1_0.enabled,um1_0.last_accessed_at,um1_0.login_time,um1_0.password,um1_0.phone_number,um1_0.role,um1_0.state,um1_0.updated_at,um1_0.username from users um1_0 where um1_0.email=?
+2026-08-22T11:35:03.655+05:30 DEBUG 19472 --- [authentication_module] [nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /profile/get-profile
+email: bharathmn006@gmail.com
+Hibernate: select um1_0.id,um1_0.account_non_expired,um1_0.account_non_locked,um1_0.address,um1_0.city,um1_0.country,um1_0.created_at,um1_0.credentials_non_expired,um1_0.date_of_birth,um1_0.email,um1_0.email_verified,um1_0.enabled,um1_0.last_accessed_at,um1_0.login_time,um1_0.password,um1_0.phone_number,um1_0.role,um1_0.state,um1_0.updated_at,um1_0.username from users um1_0 where um1_0.email=?
+looking for emailbharathmn006@gmail.com
+2026-08-22T11:35:03.707+05:30 DEBUG 19472 --- [authentication_module] [nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /profile/get-profile
+2026-08-22T11:35:03.713+05:30 TRACE 19472 --- [authentication_module] [nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.authentication_module.Controller.ProfileController#getProfile(Authentication)
+Hibernate: select um1_0.id,um1_0.account_non_expired,um1_0.account_non_locked,um1_0.address,um1_0.city,um1_0.country,um1_0.created_at,um1_0.credentials_non_expired,um1_0.date_of_birth,um1_0.email,um1_0.email_verified,um1_0.enabled,um1_0.last_accessed_at,um1_0.login_time,um1_0.password,um1_0.phone_number,um1_0.role,um1_0.state,um1_0.updated_at,um1_0.username from users um1_0 where um1_0.email=?
+2026-08-22T11:35:08.582+05:30 DEBUG 19472 --- [authentication_module] [nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing POST /auth/logout
+2026-08-22T11:35:08.605+05:30 DEBUG 19472 --- [authentication_module] [nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-08-22T11:35:08.606+05:30 DEBUG 19472 --- [authentication_module] [nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured POST /auth/logout
+2026-08-22T11:35:08.608+05:30 TRACE 19472 --- [authentication_module] [nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.authentication_module.Controller.UserController#logout(LogoutRequestDTO)
+Hibernate: select rt1_0.id,rt1_0.created_at,rt1_0.expiry_date,rt1_0.revoked,rt1_0.token,rt1_0.user_id from refresh_tokens rt1_0 where rt1_0.token=?
+Hibernate: update refresh_tokens set created_at=?,expiry_date=?,revoked=?,token=?,user_id=? where id=?
+2026-08-22T11:36:06.073+05:30 DEBUG 19472 --- [authentication_module] [nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing POST /auth/register
+2026-08-22T11:36:06.093+05:30 DEBUG 19472 --- [authentication_module] [nio-8080-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-08-22T11:36:06.095+05:30 DEBUG 19472 --- [authentication_module] [nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured POST /auth/register
+2026-08-22T11:36:06.103+05:30 TRACE 19472 --- [authentication_module] [nio-8080-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.authentication_module.Controller.UserController#registerUser(RegisterRequestDTO)
+[UserService] Registration started for email: srohan008@gmail.com
+Hibernate: select um1_0.id from users um1_0 where um1_0.email=? fetch first ? rows only
+2026-08-22T11:36:06.344+05:30  WARN 19472 --- [authentication_module] [nio-8080-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.example.authentication_module.Exception.EmailAlreadyexistsException: Email already exists!]
+2026-08-22T11:37:04.267+05:30 DEBUG 19472 --- [authentication_module] [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing POST /auth/register
+2026-08-22T11:37:04.273+05:30 DEBUG 19472 --- [authentication_module] [io-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-08-22T11:37:04.274+05:30 DEBUG 19472 --- [authentication_module] [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured POST /auth/register
+2026-08-22T11:37:04.277+05:30 TRACE 19472 --- [authentication_module] [io-8080-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.authentication_module.Controller.UserController#registerUser(RegisterRequestDTO)
+[UserService] Registration started for email: prashantmsp77@gmail.com
+Hibernate: select um1_0.id from users um1_0 where um1_0.email=? fetch first ? rows only
+Hibernate: select pr1_0.id from pending_registrations pr1_0 where pr1_0.email=? fetch first ? rows only
+Hibernate: select um1_0.id from users um1_0 where um1_0.phone_number=? fetch first ? rows only
+2026-08-22T11:37:04.363+05:30  WARN 19472 --- [authentication_module] [io-8080-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.example.authentication_module.Exception.PhoneNumberAlreadyExistsException: Phone number already exists!]
+2026-08-22T11:37:20.487+05:30 DEBUG 19472 --- [authentication_module] [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /auth/register
+2026-08-22T11:37:20.510+05:30 DEBUG 19472 --- [authentication_module] [nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-08-22T11:37:20.512+05:30 DEBUG 19472 --- [authentication_module] [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /auth/register
+2026-08-22T11:37:20.514+05:30 TRACE 19472 --- [authentication_module] [nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.authentication_module.Controller.UserController#registerUser(RegisterRequestDTO)
+[UserService] Registration started for email: prashantmsp77@gmail.com
+Hibernate: select um1_0.id from users um1_0 where um1_0.email=? fetch first ? rows only
+Hibernate: select pr1_0.id from pending_registrations pr1_0 where pr1_0.email=? fetch first ? rows only
+Hibernate: select um1_0.id from users um1_0 where um1_0.phone_number=? fetch first ? rows only
+Hibernate: select pr1_0.id from pending_registrations pr1_0 where pr1_0.phone_number=? fetch first ? rows only
+Hibernate: insert into pending_registrations (address,city,country,created_at,date_of_birth,email,expiry_date,password,phone_number,state,token,used,user_name) values (?,?,?,?,?,?,?,?,?,?,?,?,?)
+[UserService] Pending registration saved with token: ec722272-862e-4f8b-9e60-918a918ebcbe
+[UserService] Attempting to send verification email to: prashantmsp77@gmail.com
+[EmailSenderService] Preparing verification email to: prashantmsp77@gmail.com
+[EmailSenderService] Setting From: t81958319@gmail.com
+[EmailSenderService] Verification URL: http://localhost:5173/verify-email?token=ec722272-862e-4f8b-9e60-918a918ebcbe
+[EmailSenderService] Sending verification email...
+[EmailSenderService] Email sent successfully to: prashantmsp77@gmail.com
+[UserService] sendVerificationEmail returned without exception.
+2026-08-22T11:54:07.038+05:30  WARN 19472 --- [authentication_module] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=9m50s853ms533µs200ns).
+2026-08-22T11:54:31.055+05:30 DEBUG 19472 --- [authentication_module] [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /auth/login
+2026-08-22T11:54:31.057+05:30 DEBUG 19472 --- [authentication_module] [nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-08-22T11:54:31.058+05:30 DEBUG 19472 --- [authentication_module] [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured POST /auth/login
+2026-08-22T11:54:31.059+05:30 TRACE 19472 --- [authentication_module] [nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.authentication_module.Controller.UserController#loginUser(LoginRequestDTO)
+Hibernate: select um1_0.id,um1_0.account_non_expired,um1_0.account_non_locked,um1_0.address,um1_0.city,um1_0.country,um1_0.created_at,um1_0.credentials_non_expired,um1_0.date_of_birth,um1_0.email,um1_0.email_verified,um1_0.enabled,um1_0.last_accessed_at,um1_0.login_time,um1_0.password,um1_0.phone_number,um1_0.role,um1_0.state,um1_0.updated_at,um1_0.username from users um1_0 where um1_0.email=?
+Hibernate: update users set account_non_expired=?,account_non_locked=?,address=?,city=?,country=?,credentials_non_expired=?,date_of_birth=?,email=?,email_verified=?,enabled=?,last_accessed_at=?,login_time=?,password=?,phone_number=?,role=?,state=?,updated_at=?,username=? where id=?
+Hibernate: insert into refresh_tokens (created_at,expiry_date,revoked,token,user_id) values (?,?,?,?,?)
+2026-08-22T11:54:31.232+05:30 DEBUG 19472 --- [authentication_module] [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /profile/get-profile
+email: bharathmn006@gmail.com
+Hibernate: select um1_0.id,um1_0.account_non_expired,um1_0.account_non_locked,um1_0.address,um1_0.city,um1_0.country,um1_0.created_at,um1_0.credentials_non_expired,um1_0.date_of_birth,um1_0.email,um1_0.email_verified,um1_0.enabled,um1_0.last_accessed_at,um1_0.login_time,um1_0.password,um1_0.phone_number,um1_0.role,um1_0.state,um1_0.updated_at,um1_0.username from users um1_0 where um1_0.email=?
+looking for emailbharathmn006@gmail.com
+2026-08-22T11:54:31.239+05:30 DEBUG 19472 --- [authentication_module] [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /profile/get-profile
+2026-08-22T11:54:31.240+05:30 TRACE 19472 --- [authentication_module] [nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.authentication_module.Controller.ProfileController#getProfile(Authentication)
+Hibernate: select um1_0.id,um1_0.account_non_expired,um1_0.account_non_locked,um1_0.address,um1_0.city,um1_0.country,um1_0.created_at,um1_0.credentials_non_expired,um1_0.date_of_birth,um1_0.email,um1_0.email_verified,um1_0.enabled,um1_0.last_accessed_at,um1_0.login_time,um1_0.password,um1_0.phone_number,um1_0.role,um1_0.state,um1_0.updated_at,um1_0.username from users um1_0 where um1_0.email=?
+2026-08-22T13:22:00.733+05:30  WARN 19472 --- [authentication_module] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=40m52s720ms604µs).
+2026-08-24T07:31:52.501+05:30  WARN 19472 --- [authentication_module] [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1d18h10m1s166ms228µs99ns).

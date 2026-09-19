@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand palette */
+  --color-brand-900: #0b1f35;
+  --color-brand-800: #112e4b;
+  --color-brand-950: #081324;
+
+  /* Accent (warm orange, inspired by rail travel) */
+  --color-accent-50: #fff7ed;
+  --color-accent-500: #ea580c;
+  --color-accent-600: #c24100;
+
+  --color-gold: #d4a35c;
+
+  /* Typography */
+  --font-body: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-display: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+  /* Shadows */
+  --shadow-card: 0 10px 30px rgba(11, 31, 53, 0.08);
+  --shadow-card-hover: 0 20px 40px rgba(11, 31, 53, 0.14);
+  --shadow-glow: 0 0 0 4px rgba(217, 129, 8, 0.25);
+
+  /* Animations */
+  --animate-scroll: scroll 1s linear infinite;
+  --animate-pulse-slow: pulse 3s ease-in-out infinite;
+
+  @keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+}
+
+:root {
+  --rv-bg: #f8fafc;
+  --rv-surface: #ffffff;
+  --rv-brand: #0b1f35;
+  --rv-primary: #1d4ed8;
+  --rv-accent: #ea580c;
+  --rv-text: #0f172a;
+  --rv-muted: #64748b;
+  --rv-line: #e2e8f0;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    background: var(--rv-bg);
+    color: var(--rv-text);
+    font-family: var(--font-body);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background: rgba(217, 129, 8, 0.18);
+  }
+
+  #root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--rv-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--rv-line);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--rv-muted);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
