@@ -11,19 +11,22 @@ import java.util.Date;
 @Service
 public class JwtService {
 
-    private static final String SECRET =
-            "mysecretkeymysecretkeymysecretkeymysecretkey";
+    @org.springframework.beans.factory.annotation.Value("${JWT_SECRET}")
+    private String jwtSecret;
+
+    @org.springframework.beans.factory.annotation.Value("${JWT_EXPIRATION:86400000}")
+    private long jwtExpirationMs;
 
     private SecretKey getSigningKey() {
-        return Keys.hmacShaKeyFor(SECRET.getBytes());
+        return Keys.hmacShaKeyFor(jwtSecret.getBytes(java.nio.charset.StandardCharsets.UTF_8));
     }
 
     public Claims extractAllClaims(String token) {
-        return Jwts.parser()
-                .verifyWith(getSigningKey())
+        return Jwts.parserBuilder()
+                .setSigningKey(getSigningKey())
                 .build()
-                .parseSignedClaims(token)
-                .getPayload();
+                .parseClaimsJws(token)
+                .getBody();
     }
 
     public String extractEmail(String token) {
