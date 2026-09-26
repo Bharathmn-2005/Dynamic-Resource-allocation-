@@ -114,36 +114,19 @@ services:
     build:
       context: ./booking_service/booking_service
       dockerfile: Dockerfile
+    env_file:
+      - .env
     container_name: train-ticket-booking-service
     ports:
       - "8082:8082"
     environment:
-      # Database
-      BOOKING_DB_URL: ${BOOKING_DB_URL}
-      BOOKING_DB_USERNAME: ${BOOKING_DB_USERNAME}
       BOOKING_DB_PASSWORD: ${BOOKING_DB_PASSWORD}
-      
-      # Redis
-      REDIS_HOST: ${REDIS_HOST}
-      REDIS_PORT: ${REDIS_PORT}
-      
-      # Notification Service
-      NOTIFICATION_SERVICE_URL: ${NOTIFICATION_SERVICE_URL}
-
-      # Dataset
-      APP_DATASET_PATH: ${APP_DATASET_PATH}
-      ELASTICSEARCH_URL: http://elasticsearch:9200
+      JWT_SECRET: ${JWT_SECRET}
+      APP_DATASET_PATH: ${APP_DATASET_PATH:-classpath:railway-data.csv}
       APP_ELASTICSEARCH_IMPORT_ENABLED: "true"
       APP_ELASTICSEARCH_IMPORT_ON_STARTUP: "true"
       APP_ELASTICSEARCH_IMPORT_FORCE: "false"
-
-      # Scheduling and timezone
-      TICKET_REMINDER_ENABLED: ${TICKET_REMINDER_ENABLED}
-      TICKET_REMINDER_DAYS_BEFORE: ${TICKET_REMINDER_DAYS_BEFORE}
-      APP_TIMEZONE: ${APP_TIMEZONE}
-      
-      # JWT
-      JWT_SECRET: ${JWT_SECRET}
+      ELASTICSEARCH_URL: http://elasticsearch:9200
     depends_on:
       postgres:
         condition: service_healthy
